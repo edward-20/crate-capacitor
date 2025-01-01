@@ -1,0 +1,19 @@
+<div class="card">
+  <p-carousel [value]="albums" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+    <ng-template let-album #item>
+      <div class="border border-surface rounded-border m-2 p-4">
+        <div class="mb-4">
+          <div class="relative mx-auto">
+          </div>
+          <div class="mb-4 font-medium">{{ album.artist }}</div>
+          <div class="flex justify-between items-center">
+            <div class="mt-0 font-semibold text-xl">{{ '$' + album.date }}</div>
+            <span>
+              h
+            </span>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>

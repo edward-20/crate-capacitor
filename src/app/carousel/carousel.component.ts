@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 import { Album } from '@app/album/album';
@@ -9,7 +10,7 @@ import { Carousel } from 'primeng/carousel';
     selector: 'carousel-circular-demo',
     templateUrl: './carousel.component.html',
     standalone: true,
-    imports: [Carousel],
+    imports: [Carousel, DatePipe],
     providers: [AlbumService]
 })
 export class CarouselCircularDemo implements OnInit{

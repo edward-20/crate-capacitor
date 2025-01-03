@@ -20,8 +20,9 @@ export class CarouselCircularDemo implements OnInit{
     constructor(private albumService: AlbumService) {}
 
     ngOnInit() {
-        this.albumService.getAlbums().then((albums) => {
-            this.albums = albums;
+        this.albumService.getAlbums().subscribe(data => {
+            this.albums = data
+            console.log(this.albums)
         });
 
         this.responsiveOptions = [

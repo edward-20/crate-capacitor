@@ -11,7 +11,6 @@ import { Carousel } from 'primeng/carousel';
     templateUrl: './carousel.component.html',
     standalone: true,
     imports: [Carousel, DatePipe],
-    providers: [AlbumService]
 })
 export class CarouselCircularDemo implements OnInit{
     albums: Album[] = [];

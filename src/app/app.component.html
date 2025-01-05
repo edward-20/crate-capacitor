@@ -1,9 +1,11 @@
-<main class="p-12">
-  <h1 class="text-6xl mb-12 font-bold">Let's Discover</h1>
-  <h2 class="text-4xl mb-12 font-bold">Popular this week</h2>
-  <carousel-circular-demo/>
-  <h2 class="text-4xl mb-12 font-bold">New from friends</h2>
-  <carousel-circular-demo/>
-  <h2 class="text-4xl mb-12 font-bold">Popular with friends</h2>
-  <carousel-circular-demo/>
-</main>
+<router-outlet></router-outlet>
+
+<footer class="w-full">
+  <div class="flex flex-row justify-around align-center">
+    <a routerLink="home" class="block border-solid border-2 border-black grow">Home</a> 
+    <a routerLink="search" class="block border-solid border-2 border-black grow">Search</a> 
+    <a routerLink="add" class="block border-solid border-2 border-black grow">Add</a> 
+    <a routerLink="recent-activity" class="block border-solid border-2 border-black grow">Recent</a> 
+    <a routerLink="profile" class="block border-solid border-2 border-black grow">Profile</a> 
+  </div>
+</footer>

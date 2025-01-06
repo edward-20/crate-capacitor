@@ -1,16 +1,14 @@
-import { DatePipe } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 import { Album } from '@app/album/album';
 import { AlbumService } from '@app/album/album.service';
 
-import { Carousel } from 'primeng/carousel';
-
 @Component({
     selector: 'carousel-circular-demo',
     templateUrl: './carousel.component.html',
     standalone: true,
-    imports: [Carousel, DatePipe],
+    imports: [CommonModule]
 })
 export class CarouselCircularDemo implements OnInit{
     albums: Album[] = [];

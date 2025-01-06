@@ -1,9 +1,7 @@
-<div class="card">
-  <p-carousel [value]="albums" [numVisible]="5" [numScroll]="5" [circular]="false" [responsiveOptions]="responsiveOptions">
-    <ng-template let-album #item>
-      <div class="rounded-lg border-2 sm:w-[150px] md:w-[300px] lg:w-[400px] sm:h-[150px] md:h-[300px] lg:h-[400px] overflow-hidden">
-        <img [src]="album.cover" alt="album cover" class="object-contain">
-      </div>
-    </ng-template>
-  </p-carousel>
+<div class="flex flex-row w-[calc(100vw - 3rem)] overflow-scroll">
+  <div *ngFor="let album of albums">
+    <div class="rounded-lg border-2 sm:w-[150px] md:w-[300px] lg:w-[400px] sm:h-[150px] md:h-[300px] lg:h-[400px] overflow-hidden">
+      <img [src]="album.cover" alt="album cover" class="object-contain">
+    </div>
+  </div>
 </div>

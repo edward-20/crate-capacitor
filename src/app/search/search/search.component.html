@@ -1,1 +1,29 @@
-<p>search works!</p>
+<div class="p-12">
+  <div class="flex justify-center items-center mb-12">
+    <h1 class="text-6xl font-extrabold">Search</h1>
+  </div>
+  <form [formGroup]="applyForm" (submit)='submitApplication()' class="w-[100%] flex justify-center items-center">
+    <input id="search" type="text" formControlName="fuzzyValue" pInputText class="w-[90%]"/>
+    <button type="submit" class="hidden primary">Submit</button>
+  </form>
+
+  <div class="mt-12 pl-[5%]">
+    <h2 class="font-extrabold text-3xl">Browse by</h2>
+    <div class="mt-8">
+      <p-accordion value="0" [multiple]="true">
+        <p-accordion-panel value="0">
+          <p-accordion-header><p class="text-xl">Release Date</p></p-accordion-header>
+          <p-accordion-content>
+            <div class="flex flex-row justify-start ">
+              <input id="from-date" type="date" formControlName="fromDate" pInputText class="w-[90%]"/>
+            </div>
+          </p-accordion-content>
+        </p-accordion-panel>
+        <p-accordion-panel value="1">
+          <p-accordion-header><p class="text-xl">Genre, country or language</p></p-accordion-header>
+          <p-accordion-content>TBD: form to filter by genre, country or language</p-accordion-content>
+        </p-accordion-panel>
+      </p-accordion>
+    </div>
+  </div>
+</div>

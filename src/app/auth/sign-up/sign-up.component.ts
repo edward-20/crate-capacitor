@@ -9,9 +9,4 @@ import { RouterModule } from '@angular/router';
   styleUrl: './sign-up.component.scss'
 })
 export class SignUpComponent {
-  authForm = model.required<AuthForm>()
-
-  changeForm(newForm: AuthForm) {
-    this.authForm.update(newForm => newForm);
-  }
 }

@@ -1,0 +1,19 @@
+<h1 class="text-6xl mb-12 font-extrabold">Sign Up</h1>
+<form class="flex flex-col gap-4 w-[60ch]">
+  <label for="email" class="text-2xl">Email</label>
+  <input id="email" type="email" class="bg-slate-300 rounded-sm p-2">
+  <label for="username" class="text-2xl">Username</label>
+  <input id="username" type="text" class="bg-slate-300 rounded-sm p-2">
+  <label for="password" class="text-2xl">Password</label>
+  <input id="password" type="password" class="bg-slate-300 rounded-sm p-2">
+  <div class="flex flex-row justify-between">
+    <p>I am over 16 and accept the terms of use</p> <input type="checkbox">
+  </div>
+  <div class="flex flex-row justify-between">
+    <p>I accept the privacy policy</p> <input type="checkbox">
+  </div>
+  <div class="mt-4 flex justify-left gap-4">
+    <button class="bg-slate-300 rounded-sm w-[20ch] p-2" type="submit">Sign Up</button>
+    <a class="bg-sky-300 rounded-sm w-[40ch] p-2 flex justify-center" routerLink="../sign-in">Already have an account?</a>
+  </div>
+</form>

@@ -1,21 +1,43 @@
 <router-outlet></router-outlet>
 
-<footer class="w-full bg-slate-300 lg:p-12 py-6">
-  <div class="flex flex-row justify-around align-center">
-    <a routerLink="home" class="border-solid border-r-2 border-black grow flex justify-center items-center">
-      <img src="/cd/icons8-cd-50.png" alt="cd icon">
-    </a> 
-    <a routerLink="search" class="border-solid border-r-2 border-black grow flex justify-center items-center">
-      <img src="/icons8-search.svg" alt="search icon">
-    </a> 
-    <a routerLink="add" class="border-solid border-r-2 border-black grow flex justify-center items-center">
-      <img src="/icons8-plus.svg" alt="add icon">
-    </a> 
-    <a routerLink="recent-activity" class="border-solid border-r-2 border-black grow flex justify-center items-center">
-      <img src="/comments/icons8-comments-50.png" alt="comment icon">
-    </a> 
-    <a routerLink="profile" class="border-solid border-black grow flex justify-center items-center">
-      <img src="/avatar/icons8-avatar-50.png" alt="avatar icon">
-    </a> 
-  </div>
-</footer>
+<div *ngIf="isLoggedIn; then loggedIn; else loggedOut"></div>
+<ng-template #loggedIn>
+  <nav class="bottom-nav">
+    <div class="flex flex-row justify-around align-center">
+      <a routerLink="home" class="nav-link">
+        <img src="/cd/icons8-cd-50.png" alt="cd icon">
+      </a> 
+      <a routerLink="search" class="nav-link">
+        <img src="/icons8-search.svg" alt="search icon">
+      </a> 
+      <a routerLink="add" class="nav-link">
+        <img src="/icons8-plus.svg" alt="add icon">
+      </a> 
+      <a routerLink="recent-activity" class="nav-link">
+        <img src="/comments/icons8-comments-50.png" alt="comment icon">
+      </a> 
+      <a routerLink="profile" class="nav-link border-none">
+        <img src="/avatar/icons8-avatar-50.png" alt="avatar icon">
+      </a> 
+    </div>
+  </nav>
+</ng-template>
+
+<ng-template #loggedOut>
+  <nav class="bottom-nav">
+    <div class="flex flex-row justify-around align-center">
+      <a routerLink="auth/sign-in" class="nav-link">
+        <img src="/add-user/icons8-add-user-male-50.png" alt="add user icon">
+        <div>Sign In</div>
+      </a> 
+      <a routerLink="home" class="nav-link">
+        <img src="/cd/icons8-cd-50.png" alt="cd icon">
+        <div>Popular</div>
+      </a> 
+      <a routerLink="search" class="nav-link border-none">
+        <img src="/icons8-search.svg" alt="search icon">
+        <div>Search</div>
+      </a> 
+    </div>
+  </nav>
+</ng-template>

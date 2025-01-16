@@ -6,3 +6,17 @@
 :root {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
+
+@layer components {
+  .nav-link {
+    @apply border-solid border-r-2 border-black grow flex justify-center items-center sm:h-[10px] md:h-[10px] lg:h-[50px] object-contain gap-4;
+  }
+
+  nav.bottom-nav {
+    @apply w-full bg-slate-300 fixed bottom-0 lg:p-12 py-6;
+  }
+
+  main {
+    @apply w-full h-full lg:pb-40 px-12 pt-12;
+  }
+}
